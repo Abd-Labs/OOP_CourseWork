@@ -1,0 +1,24 @@
+Line = " 111 Product name 456.00"
+
+StringTokenizer token = new StringTokenizer(Line);
+
+String name=""; int id; double price;
+
+int i=0;
+while(token.hasmoreToken()){
+
+if(i==0){
+   id = Integer.parseInt(token.nextToken());
+
+}
+
+if(i>0 && i<token.countTokens()-1){
+   name = name + token.nextToken();
+}
+
+if(i== (token.countTokens()-1)){
+
+   price = Double.parsedouble(token.nextToken());
+}
+i++;
+}
